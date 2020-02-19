@@ -49,7 +49,7 @@ namespace SharedTrip.Controllers
             
             this.usersService.Register(model.Username, model.Email, model.Password);
 
-            return this.View("/Users/Login");
+            return this.Redirect("/Users/Login"); 
         }
 
         public HttpResponse Login()
