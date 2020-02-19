@@ -26,7 +26,7 @@
                 <input type="text" readonly class="form-control" id="description" name="Description" value="@Model.Description">
             </div>
             <div class="form-group text-center">
-                @if (Model.IsSameUser)
+                @if (Model.IsSameUser || Model.Seats == 0)
                 {
                 <div class="button-holder">
                     <a href="/Trips/AddUserToTrip?tripId=@Model.Id" class="btn btn-primary btn-block text-uppercase disabled">Join</a>
