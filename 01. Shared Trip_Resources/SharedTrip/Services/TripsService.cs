@@ -64,7 +64,7 @@
                   Id = t.Id,
                   StartPoint = t.StartPoint,
                   EndPoint = t.EndPoint,
-                  DepartureTime = t.DepartureTime.ToString("dd.MM.yyyy HH:mm:ss"),
+                  DepartureTime = t.DepartureTime.ToString("dd.MM.yyyy HH:mm"), // format in ToString()
                   Seats = t.Seats,
                   ImagePath = t.ImagePath,
                   Description = t.Description,
