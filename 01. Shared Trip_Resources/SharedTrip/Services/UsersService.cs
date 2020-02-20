@@ -1,13 +1,11 @@
-﻿using SharedTrip.Models;
-using SIS.MvcFramework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-
-namespace SharedTrip.Services
+﻿namespace SharedTrip.Services
 {
+    using SharedTrip.Models;
+    using SIS.MvcFramework;
+    using System.Linq;
+    using System.Security.Cryptography;
+    using System.Text;
+
     public class UsersService : IUsersService
     {
         private readonly ApplicationDbContext db;

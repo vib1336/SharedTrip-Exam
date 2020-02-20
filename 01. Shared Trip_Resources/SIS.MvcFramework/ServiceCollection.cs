@@ -17,7 +17,7 @@ namespace SIS.MvcFramework
             dependecyContainer[typeof(TSource)] = typeof(TDestination);
         }
 
-        public object CreateInstance(Type type)
+        public object CreateInstance(Type type) 
         {
             if (dependecyContainer.ContainsKey(type))
             {

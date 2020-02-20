@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-
-namespace SharedTrip.Models
+﻿namespace SharedTrip.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+
     public class Trip
     {
         public Trip()

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SharedTrip.Models
+﻿namespace SharedTrip.Models
 {
     public class UserTrip
     {

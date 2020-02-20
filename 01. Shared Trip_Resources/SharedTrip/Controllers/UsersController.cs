@@ -1,13 +1,10 @@
-﻿using SharedTrip.Services;
-using SharedTrip.ViewModels;
-using SIS.HTTP;
-using SIS.MvcFramework;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SharedTrip.Controllers
+﻿namespace SharedTrip.Controllers
 {
+    using SharedTrip.Services;
+    using SharedTrip.ViewModels.Users;
+    using SIS.HTTP;
+    using SIS.MvcFramework;
+
     public class UsersController : Controller
     {
         private IUsersService usersService;

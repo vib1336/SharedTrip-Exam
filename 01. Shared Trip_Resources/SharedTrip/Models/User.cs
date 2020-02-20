@@ -1,10 +1,9 @@
-﻿using SIS.MvcFramework;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
-namespace SharedTrip.Models
+﻿namespace SharedTrip.Models
 {
+    using SIS.MvcFramework;
+    using System;
+    using System.Collections.Generic;
+
     public class User : IdentityUser<string>
     {
         public User()

@@ -1,13 +1,11 @@
-﻿using SharedTrip.Models;
-using SharedTrip.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-
-namespace SharedTrip.Services
+﻿namespace SharedTrip.Services
 {
+    using SharedTrip.Models;
+    using SharedTrip.ViewModels.Trips;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class TripsService : ITripsService
     {
         private ApplicationDbContext db;
