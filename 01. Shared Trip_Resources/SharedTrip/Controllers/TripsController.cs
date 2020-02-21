@@ -4,6 +4,7 @@
     using SIS.HTTP;
     using SIS.MvcFramework;
     using SharedTrip.ViewModels.Trips;
+    using static SharedTrip.Data.DataValidation;
     using System;
     using System.Globalization;
 
@@ -67,12 +68,12 @@
                 return this.Redirect("/Trips/Add");
             }
 
-            if (seats < 2 || seats > 6)
+            if (seats < SeatsMinSize || seats > SeatsMaxSize)
             {
                 return this.Redirect("/Trips/Add");
             }
 
-            if (string.IsNullOrWhiteSpace(model.Description) || model.Description.Length > 80)
+            if (string.IsNullOrWhiteSpace(model.Description) || model.Description.Length > DescriptionMaxSize)
             {
                 return this.Redirect("/Trips/Add");
             }

@@ -2,6 +2,7 @@
 {
     using SharedTrip.Services;
     using SharedTrip.ViewModels.Users;
+    using static SharedTrip.Data.DataValidation;
     using SIS.HTTP;
     using SIS.MvcFramework;
 
@@ -22,7 +23,7 @@
         [HttpPost]
         public HttpResponse Register(RegisterUserInputModel model)
         {
-            if (model.Username.Length < 5 || model.Username.Length > 20 
+            if (model.Username.Length < UsernameMinSize || model.Username.Length > UsernameAndPasswordMaxSize 
                 || this.usersService.UsernameExists(model.Username))
             {
                 return this.Redirect("/Users/Register"); 
@@ -33,7 +34,7 @@
                 return this.Redirect("/Users/Register"); 
             }
 
-            if (model.Password.Length < 6 || model.Password.Length > 20)
+            if (model.Password.Length < PasswordMinSize || model.Password.Length > UsernameAndPasswordMaxSize)
             {
                 return this.Redirect("/Users/Register");
             }
