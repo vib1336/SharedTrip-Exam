@@ -50,7 +50,7 @@
 
             string userIdToCheck = this.db
                 .UserTrips
-                .Where(ut => ut.TripId == tripId)
+                .Where(ut => ut.TripId == tripId && ut.UserId == currentUserId) 
                 .Select(ut => ut.UserId)
                 .FirstOrDefault();
 
@@ -64,7 +64,7 @@
                   Id = t.Id,
                   StartPoint = t.StartPoint,
                   EndPoint = t.EndPoint,
-                  DepartureTime = t.DepartureTime.ToString("dd.MM.yyyy HH:mm"), // format in ToString()
+                  DepartureTime = t.DepartureTime.ToString("dd.MM.yyyy HH:mm"), 
                   Seats = t.Seats,
                   ImagePath = t.ImagePath,
                   Description = t.Description,
